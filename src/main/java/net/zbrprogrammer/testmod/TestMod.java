@@ -1,6 +1,8 @@
 package net.zbrprogrammer.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +15,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.zbrprogrammer.testmod.items.TestItem;
 import org.slf4j.Logger;
 
 @Mod(TestMod.MODID)
@@ -22,6 +25,7 @@ public class TestMod {
 
     public TestMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        TestItem.register(modEventBus);//将物品添加到主线程中
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -31,8 +35,10 @@ public class TestMod {
 
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {//添加物品所在创造模式选项卡
+        if(event.getTabKey()== CreativeModeTabs.INGREDIENTS){
+            event.accept(TestItem.ItemName);
+        }
     }
 
     @SubscribeEvent

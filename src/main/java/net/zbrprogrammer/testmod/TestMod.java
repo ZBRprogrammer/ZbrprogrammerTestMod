@@ -18,6 +18,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.zbrprogrammer.testmod.items.TestItem;
 import org.slf4j.Logger;
 
+import static net.zbrprogrammer.testmod.items.TestItem.ItemName;
+
 @Mod(TestMod.MODID)
 public class TestMod {
     public static final String MODID = "testmod";
@@ -37,7 +39,7 @@ public class TestMod {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {//添加物品所在创造模式选项卡
         if(event.getTabKey()== CreativeModeTabs.INGREDIENTS){
-            event.accept(TestItem.ItemName);
+            event.accept(ItemName);
         }
     }
 

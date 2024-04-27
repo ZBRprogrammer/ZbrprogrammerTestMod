@@ -7,8 +7,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zbrprogrammer.testmod.TestMod;
+import net.zbrprogrammer.testmod.block.TestBlock;
 
 public class TestCreativeModTabs {
     //create creative tabs class
@@ -21,6 +23,7 @@ public class TestCreativeModTabs {
                     .title(Component.translatable("creativetab.test_creative_tab"))//set the title(pKey is going to be translated in lang)
                     .displayItems((itemDisplayParameters, output) -> {//the item it will contain
                         output.accept(TestItem.item_name.get());
+                        output.accept(TestBlock.block_name.get());
                         output.accept(TestItem.item_with_creative_category.get());//Mod Items example
 
                         output.accept(Items.DIAMOND);//vanilla item example,only use ".get()" with custom item

@@ -1,5 +1,6 @@
 {
   "item.testmod.item_name": "item name",
   "item.testmod.item_with_creative_category": "item with creative category",
-  "creativetab.test_creative_tab": "A Creative Tab by Custom"
+  "creativetab.test_creative_tab": "A Creative Tab by Custom",
+  "block.testmod.block_name": "block name"
 }

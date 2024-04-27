@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.zbrprogrammer.testmod.block.TestBlock;
 import net.zbrprogrammer.testmod.item.TestCreativeModTabs;
 import net.zbrprogrammer.testmod.item.TestItem;
 import org.slf4j.Logger;
@@ -24,8 +25,9 @@ public class TestMod {
 
     public TestMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        TestCreativeModTabs.register(modEventBus);//将物品栏标签添加到主线程
-        TestItem.register(modEventBus);//将物品添加到主线程中
+        TestCreativeModTabs.register(modEventBus);//add custom creative tab to main bus
+        TestItem.register(modEventBus);//add custom items to main bus
+        TestBlock.register(modEventBus);//add custom block to main bus
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

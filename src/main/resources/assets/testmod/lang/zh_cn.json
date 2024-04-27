@@ -2,5 +2,6 @@
   "item.testmod.item_name": "物品名称",
   "item.testmod.item_with_creative_category": "有创造模式物品标签的物品",
   "creativetab.test_creative_tab": "由创作者制作的创造模式物品标签栏",
-  "block.testmod.block_name": "方块名称"
+  "block.testmod.block_name": "方块名称",
+  "block.testmod.the_second_block": "第二个方块"
 }

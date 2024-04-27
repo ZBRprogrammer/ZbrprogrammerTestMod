@@ -36,7 +36,9 @@ public class TestBlock {
 
     //add attribute to custom block(".copy()" to copy exist blocks, ".xxx()" to change exact attribute)
     public static final RegistryObject<Block>block_name=registerBlock("block_name",
-            ()->new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));//
+            ()->new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block>the_second_block=registerBlock("the_second_block",
+            ()->new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.BAMBOO)));
 
 
     //add block to the bus

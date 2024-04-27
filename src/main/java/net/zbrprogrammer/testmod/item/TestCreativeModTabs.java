@@ -24,6 +24,7 @@ public class TestCreativeModTabs {
                     .displayItems((itemDisplayParameters, output) -> {//the item it will contain
                         output.accept(TestItem.item_name.get());
                         output.accept(TestBlock.block_name.get());
+                        output.accept(TestBlock.the_second_block.get());
                         output.accept(TestItem.item_with_creative_category.get());//Mod Items example
 
                         output.accept(Items.DIAMOND);//vanilla item example,only use ".get()" with custom item

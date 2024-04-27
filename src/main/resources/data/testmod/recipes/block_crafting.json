@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "testmod:item_name"
+    }
+  },
+  "result": {
+    "item": "testmod:block_name",
+    "count": 1
+  }
+}

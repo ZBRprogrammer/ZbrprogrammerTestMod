@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "item_name",
+  "ingredient": {
+    "item": "testmod:item_with_creative_category"
+  },
+  "result": "testmod:item_name"
+}

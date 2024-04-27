@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:the_second_block"
+    }
+  ],
+  "result": {
+    "item": "testmod:item_with_creative_category",
+    "count": 9
+  }
+}
